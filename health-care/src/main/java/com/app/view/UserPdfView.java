@@ -27,7 +27,7 @@ public class UserPdfView extends AbstractPdfView {
 									HttpServletResponse response) 
 											throws Exception {
 		//download option with file name
-		response.addHeader("Content-Disposition", "attachement;filename=Employees.pdf");
+		response.addHeader("Content-Disposition", "attachement;filename=Users.pdf");
 		//create Element
 		Paragraph p=new Paragraph("Users Details");
 		//add to doc
