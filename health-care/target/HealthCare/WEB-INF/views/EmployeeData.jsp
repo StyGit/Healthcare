@@ -34,5 +34,6 @@
 		</c:forEach>
 	${message}
 	</table>
+	<a href="excel">Excel Export</a>|<a href="pdf">Pdf Export</a>
 	</body>
 </html>

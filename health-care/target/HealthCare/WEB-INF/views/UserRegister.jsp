@@ -14,8 +14,8 @@
 Name 	 :	<form:input path="userName"/><br>
 Email 	 :	<form:input path="userEmail"/><br>
 Contact  :	<form:input path="userContact"/><br>
-Password :	<form:password path="userPwd"/><br>
-ADDRESS	 :	<form:textarea path="userAddr"/>
+Password :	<form:input path="userPwd"/><br>
+ADDRESS	 :<form:textarea path="userAddr"/>
 </pre>
 <input type="submit" value="Register">
 </form:form>
