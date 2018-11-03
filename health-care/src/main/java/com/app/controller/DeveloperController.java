@@ -22,13 +22,13 @@ public class DeveloperController {
 	private IDeveloperService service;
 	private IProjectService projectService;
 
-	// 1.show user Registration Page
+	// 1.show user Registration Page!
 	@RequestMapping("/register")
 	public String showRegPage(ModelMap map) {
 		// create ModelAttribute Object
 		map.addAttribute("developer", new Developer());
-		List<Project> projects=projectService.getAllProjects();
-		map.addAttribute("projects",projects);
+		List<Project> projects = projectService.getAllProjects();
+		map.addAttribute("projects", projects);
 		return "DeveloperRegister";
 	}
 
@@ -40,8 +40,8 @@ public class DeveloperController {
 		map.addAttribute("message", msg);
 		// clear from data
 		map.addAttribute("developer", new Developer());
-		List<Project> projects=projectService.getAllProjects();
-		map.addAttribute("projects",projects);
+		List<Project> projects = projectService.getAllProjects();
+		map.addAttribute("projects", projects);
 		return "DeveloperRegister";
 	}
 
