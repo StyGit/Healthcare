@@ -18,7 +18,7 @@ public class ProjectController {
 	@Autowired
 	private IProjectService service;
 
-	// 1.show user Registration Page
+	// 1.show user Registration Page!
 	@RequestMapping("/register")
 	public String showRegPage(ModelMap map) {
 		// create ModelAttribute Object
