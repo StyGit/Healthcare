@@ -22,7 +22,7 @@ public class UserController {
 	@Autowired
 	private IUserService service;
 
-	//1.show user Registration Page!
+	//1.show user Registration Page
 	@RequestMapping("/register")
 	public String showRegPage(ModelMap map) {
 
