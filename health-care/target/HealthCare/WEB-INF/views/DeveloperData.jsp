@@ -41,7 +41,7 @@ a:hover {
 <td><c:out value="${dev.devId}"/></td>
 <td><c:out value="${dev.devCode}"/></td>
 <td><c:out value="${dev.devName}"/></td>
-<td><c:out value="${dev.project}"/></td>
+<td><c:out value="${dev.project.projName}"/></td>
 <td><c:out value="${dev.salary}"/></td>
 <td><a href="delete?id=${dev.devId}">Delete</a>
 <td><a href="edit?id=${dev.devId}">Update</a>

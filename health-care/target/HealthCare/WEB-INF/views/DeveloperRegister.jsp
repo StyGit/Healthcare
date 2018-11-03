@@ -28,8 +28,9 @@ Developer
 <form:form action="insert" method="POST" modelAttribute="developer">
 Developer Code :<form:input path="devCode"/><br>
 Developer Name :<form:input path="devName"/><br>
-Project        :<form:select path="project">--SELECT--
-				<form:options  items="${projects}" itemLabel="${projCode}" itemValue="${projId}" />
+Project        :<form:select path="project.projId">
+				<form:option value="">--SELECT--</form:option>
+				<form:options  items="${projects}" itemLabel="projName" itemValue="projId" />
 				</form:select><br>
 Salary         :<form:input path="devSalary"/><br><br>
 				<input type="submit" value="Register Developer"/>
