@@ -20,15 +20,17 @@ import com.app.service.IProjectService;
 public class DeveloperController {
 	@Autowired
 	private IDeveloperService service;
+	@Autowired
 	private IProjectService projectService;
 
 	// 1.show user Registration Page!
 	@RequestMapping("/register")
 	public String showRegPage(ModelMap map) {
 		// create ModelAttribute Object
-		map.addAttribute("developer", new Developer());
 		List<Project> projects = projectService.getAllProjects();
 		map.addAttribute("projects", projects);
+		map.addAttribute("developer", new Developer());
+		
 		return "DeveloperRegister";
 	}
 
@@ -36,12 +38,12 @@ public class DeveloperController {
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public String insertDeveloper(@ModelAttribute Developer developer, ModelMap map) {
 		Integer dId = service.saveDeveloper(developer);
+		List<Project> projects = projectService.getAllProjects();
+		map.addAttribute("projects", projects);
 		String msg = "developer '" + dId + "' Saved";
 		map.addAttribute("message", msg);
 		// clear from data
 		map.addAttribute("developer", new Developer());
-		List<Project> projects = projectService.getAllProjects();
-		map.addAttribute("projects", projects);
 		return "DeveloperRegister";
 	}
 

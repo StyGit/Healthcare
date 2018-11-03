@@ -24,7 +24,6 @@ public class Developer {
 	private double devSalary;
 	@ManyToOne
 	@JoinColumn(name="p_idFk")
-	@Column(name="project")
 	private Project project;//HAS-A
 	
 	public Developer() {
