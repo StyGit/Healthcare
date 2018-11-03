@@ -17,9 +17,15 @@ public class DocumentDaoImpl implements IDocumentDao {
 	public int saveDocument(Document doc) {
 		return (Integer)ht.save(doc);
 	}
+	@SuppressWarnings({ "unchecked", "deprecation" })
 	@Override
 	public List<Object[]> getDocumentNameAndId() {
 		return (List<Object[]>)ht.find(HQL);
+	}
+	@Override
+	public Document getOneDocumentById(int docId) {
+		
+		return ht.get(Document.class, docId);
 	}
 
 }

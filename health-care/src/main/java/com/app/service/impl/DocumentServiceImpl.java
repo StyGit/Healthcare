@@ -23,6 +23,11 @@ public class DocumentServiceImpl implements IDocumentService {
 		
 		return dao.getDocumentNameAndId();
 	}
+	@Transactional(readOnly=true)
+	public Document getOneDocumentById(int docId) {
+		
+		return dao.getOneDocumentById(docId);
+	}
 
 	
 }

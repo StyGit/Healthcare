@@ -32,6 +32,7 @@ public class EmployeePdfView extends AbstractPdfView {
 		//add to doc
 		document.add(p);
 		//read data from map
+		@SuppressWarnings("unchecked")
 		List<Employee> emps=(List<Employee>)model.get("emps");
 		//create table
 		PdfPTable table=new PdfPTable(6);

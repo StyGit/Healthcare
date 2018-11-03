@@ -40,7 +40,7 @@ ${message}
 <tr>
 <td><c:out value="${doc[0]}"></c:out></td>
 <td><c:out value="${doc[1]}"></c:out></td>
-<td><a href="#">DOWNLOAD</a></td>
+<td><a href="download?docId=${doc[0]}">DOWNLOAD</a></td>
 </tr>
 </c:forEach>
 </table></center>

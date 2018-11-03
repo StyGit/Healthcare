@@ -1,9 +1,6 @@
 package com.app.config;
 
 import java.util.Properties;
-
-import javax.xml.bind.annotation.XmlElementDecl.GLOBAL;
-
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -19,8 +16,10 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.app.model.Developer;
 import com.app.model.Document;
 import com.app.model.Employee;
+import com.app.model.Project;
 import com.app.model.User;
 
 /**
@@ -62,7 +61,7 @@ public class AppConfig {
 	public LocalSessionFactoryBean sfObj() {
 		LocalSessionFactoryBean sf = new LocalSessionFactoryBean();
 		sf.setDataSource(dsObj());
-		sf.setAnnotatedClasses(Employee.class, User.class,Document.class);
+		sf.setAnnotatedClasses(Employee.class, User.class,Document.class,Project.class,Developer.class);
 		sf.setHibernateProperties(props());
 		return sf;
 	}

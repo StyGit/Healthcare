@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.view.document.AbstractPdfView;
 
-import com.app.model.Employee;
 import com.app.model.User;
 import com.lowagie.text.Document;
 import com.lowagie.text.Paragraph;
@@ -33,6 +32,7 @@ public class UserPdfView extends AbstractPdfView {
 		//add to doc
 		document.add(p);
 		//read data from map
+		@SuppressWarnings("unchecked")
 		List<User> users=(List<User>)model.get("users");
 		//create table
 		PdfPTable table=new PdfPTable(6);

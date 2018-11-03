@@ -26,6 +26,7 @@ public class EmployeeExcelView extends AbstractXlsxView {
 		// create head
 		setHead(sheet);
 		// read data
+		@SuppressWarnings("unchecked")
 		List<Employee> emps = (List<Employee>) model.get("emps");
 		// set body
 		setBody(sheet, emps);
