@@ -26,6 +26,7 @@ Developer
 </legend>
 <pre>
 <form:form action="update" method="POST" modelAttribute="developer">
+Developer Id   :<form:input path="devId" readonly="true"/><br>
 Developer Code :<form:input path="devCode"/><br>
 Developer Name :<form:input path="devName"/><br>
 Project        :<form:select path="project.projId">

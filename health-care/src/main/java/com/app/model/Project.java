@@ -12,7 +12,7 @@ public class Project {
 	@Id
 	@GeneratedValue
 	@Column(name="p_id")
-	private int projId;
+	private Integer projId;
 	@Column(name="p_code")
 	private String projCode;
 	@Column(name="p_name")
@@ -36,7 +36,7 @@ public class Project {
 		this.projDept = projDept;
 		this.projNote = projNote;
 	}
-	public int getProjId() {
+	public Integer getProjId() {
 		return projId;
 	}
 	public String getProjCode() {
@@ -51,7 +51,7 @@ public class Project {
 	public String getProjNote() {
 		return projNote;
 	}
-	public void setProjId(int projId) {
+	public void setProjId(Integer projId) {
 		this.projId = projId;
 	}
 	public void setProjCode(String projCode) {

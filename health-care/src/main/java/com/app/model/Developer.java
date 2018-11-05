@@ -15,7 +15,7 @@ public class Developer {
 	@Id
 	@GeneratedValue
 	@Column(name="d_id")
-	private int devId;
+	private Integer devId;
 	@Column(name="d_code")
 	private String devCode;
 	@Column(name="d_name")

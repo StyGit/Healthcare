@@ -72,6 +72,8 @@ public class DeveloperController {
 	public String editDeveloper(@RequestParam("id") Integer dId, ModelMap map) {
 		Developer developer = service.getOneDeveloper(dId);
 		map.addAttribute("developer", developer);
+		List<Project> projects = projectService.getAllProjects();
+		map.addAttribute("projects", projects);
 		return "DeveloperEdit";
 	}
 
